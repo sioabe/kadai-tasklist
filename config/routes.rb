@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'toppage',to: 'users#index'
-  root to:'tasks#index'
+  get 'toppage',to: 'tasks#index'
+  root to:'users#index'
   resources :tasks
   
   #ユーザー登録

@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :require_user_logged_in
-  before_action :correct_user, only: [:update,:destroy,:show]
+  before_action :correct_user, only: [:update,:destroy,:show,:edit]
   def index
     @task = current_user.tasks.build
     @tasks = current_user.tasks.order('created_at DESC').page(params[:page])#一覧表示用
