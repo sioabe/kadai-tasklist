@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :require_user_logged_in
   def index
     @tasks = Task.all
   end
@@ -54,7 +55,7 @@ class TasksController < ApplicationController
   
   #StrongParameter
   def task_params
-    params.require(:task).permit(:content,:status)
+    params.require(:task).permit(:content,:status,:user)
   end
   
 end
