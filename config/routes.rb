@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'toppage',to: 'users#index'
   root to:'tasks#index'
   resources :tasks
   
